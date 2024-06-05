@@ -124,9 +124,17 @@ export default function ProductList() {
 
   //to handle filter
   const handleFilter=(e,section,option)=>{
-    const newFilter={...filter,[section.id]:option.value};
+    console.log(e.target.checked)
+    const newFilter={...filter};
+    //TODO: on server it will support multiple categories
+    if(e.target.checked){
+      newFilter[section.id]=option.value;
+    } else{
+      delete newFilter[section.id];
+    }
+    
     setFilter(newFilter)
-    dispatch(fetchProductsByFiltersAsync(newFilter))
+    
     
     console.log(section.id,option.value)
     
@@ -142,9 +150,10 @@ export default function ProductList() {
   }
 
   useEffect(()=>{
-    dispatch(fetchAllProductsAsync())
+   
+    dispatch(fetchProductsByFiltersAsync(filter))
   
-  },[dispatch])
+  },[dispatch,filter])
 
   return (
   <div className="bg-white">
@@ -238,9 +247,9 @@ export default function ProductList() {
 
       {/* end of products and filters */}
 
-      <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
+      
       <Pagination></Pagination>
-    </div>
+    
     
         
   </main>
@@ -399,7 +408,7 @@ function DesktopFilter({handleFilter}){
 
 function Pagination(){
   return(
-    <div>
+    <div className="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6">
       <div className="flex flex-1 justify-between sm:hidden">
         <a
           href="#"
