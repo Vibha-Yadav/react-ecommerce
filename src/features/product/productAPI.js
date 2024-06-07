@@ -1,13 +1,4 @@
-// A mock function to mimic making an async request for data
-// export function fetchCount(amount = 1) {
-//   return new Promise(async (resolve) =>{
-//     // setTimeout(() => resolve({ data: amount }), 500)
-//   const response= await fetch('http://localhost:8080')
-//   const result = await response.json()
-//   resolve({data})
-//   }
-//   );
-// }
+
 export function fetchAllProducts() {
   return new Promise(async(resolve) =>{
     const response = await fetch('http://localhost:8080/products');
@@ -33,13 +24,13 @@ export function fetchProductsByFilters(filter,sort,pagination) {
 
   for (let key in sort) {
     
-      queryString += `${key}=${sort[key]}}&`;    
+      queryString += `${key}=${sort[key]}&`;    
     
   }
-
+console.log(pagination)
   for (let key in pagination) {
     
-    queryString += `${key}=${sort[key]}}&`;    
+    queryString += `${key}=${pagination[key]}&`;    
   
 }
 
@@ -49,7 +40,30 @@ export function fetchProductsByFilters(filter,sort,pagination) {
   return new Promise(async(resolve) =>{
     const response = await fetch('http://localhost:8080/products?'+queryString);
     const data = await response.json();
+    const totalItems = await response.headers.get('X-Total-Count');
+    // const totalItems = 100;
+    resolve({data:{products:data,totalItems:+totalItems}});
+  }
+  );
+}
+
+export function fetchCategories() {
+  return new Promise(async(resolve) =>{
+    const response = await fetch('http://localhost:8080/categories');
+    const data = await response.json();
     resolve({data});
   }
   );
 }
+
+export function fetchBrands() {
+  return new Promise(async(resolve) =>{
+    const response = await fetch('http://localhost:8080/brands');
+    const data = await response.json();
+    resolve({data});
+  }
+  );
+}
+
+
+
