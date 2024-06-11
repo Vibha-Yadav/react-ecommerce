@@ -20,7 +20,15 @@ const sizes= [
   { name: 'XL', inStock: true },
   { name: '2XL', inStock: true },
   { name: '3XL', inStock: true },
-]
+];
+
+const highlights= [
+  'Hand cut and sewn locally',
+  'Dyed with our proprietary colors',
+  'Pre-washed & pre-shrunk',
+  'Ultra-soft 100% cotton',
+];
+
 const product = {
   name: 'Basic Tee 6-Pack',
   price: '$192',
@@ -50,12 +58,7 @@ const product = {
 
   description:
     'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
-  highlights: [
-    'Hand cut and sewn locally',
-    'Dyed with our proprietary colors',
-    'Pre-washed & pre-shrunk',
-    'Ultra-soft 100% cotton',
-  ],
+  
   details:
     'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
 }
@@ -152,7 +155,7 @@ export default function ProductDetail() {
           {/* Options */}
           <div className="mt-4 lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
-            <p className="text-3xl tracking-tight text-gray-900">{product.price}</p>
+            <p className="text-3xl tracking-tight text-gray-900">${product.price}</p>
 
             {/* Reviews */}
             <div className="mt-6">
@@ -298,7 +301,7 @@ export default function ProductDetail() {
 
               <div className="mt-4">
                 <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
-                  {product.highlights && product.highlights.map((highlight) => (
+                  {highlights.map((highlight) => (
                     <li key={highlight} className="text-gray-400">
                       <span className="text-gray-600">{highlight}</span>
                     </li>
