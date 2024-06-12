@@ -9,7 +9,7 @@ import {
 } from './cartSlice';
 import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 
 
 
@@ -31,6 +31,7 @@ export default function Cart() {
   
   return (
     <>
+    {!items.length && <Navigate to="/" replace={true}></Navigate>}
     <div>
     <div className="mx-auto mt-12 bg-white max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
     
@@ -126,7 +127,7 @@ export default function Cart() {
                         </p>
                       </div>
                     </div>
-                </div> 
+    </div> 
 
     </div>               
     </>
