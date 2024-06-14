@@ -20,6 +20,9 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchItemsByUserIdAsync } from './features/cart/cartSlice';
 import { selectLoggedInUser } from './features/auth/authSlice';
+import PageNotFound from './pages/404';
+import OrderSuccessPage from './pages/OrderSuccessPage';
+
 
 const router = createBrowserRouter([
   {
@@ -53,6 +56,16 @@ const router = createBrowserRouter([
     element: <Protected>
       <ProductDetailPage></ProductDetailPage>
       </Protected>,
+  },
+  {
+    path: "/order-success",
+    element: <OrderSuccessPage></OrderSuccessPage>
+      
+  },
+  {
+    path: "*",
+    element: <PageNotFound></PageNotFound>
+      
   },
 ]);
 
