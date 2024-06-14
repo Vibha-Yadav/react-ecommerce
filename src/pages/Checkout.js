@@ -13,6 +13,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { Link,Navigate } from 'react-router-dom'
 import { useForm } from "react-hook-form";
 import { updateUserAsync,selectLoggedInUser } from '../features/auth/authSlice';
+import { createOrderAsync,selectCurrentOrderStatus } from '../features/order/orderSlice';
 
 
 
@@ -26,6 +27,7 @@ function Checkout() {
   const user=useSelector(selectLoggedInUser);
 
   const items=useSelector(selectItems);
+  const orderPlaced=useSelector(selectCurrentOrderStatus);
   const totalAmount=items.reduce((amount, item) => item.price*item.quantity + amount, 0);
   const totalItems=items.reduce((total, item) => item.quantity + total, 0);
 
@@ -48,10 +50,26 @@ function Checkout() {
     setPaymentMethod(e.target.value);
  };
 
+ const handleOrder = (e) => {
+  if( selectedAddress && paymentMethod)
+    {
+  const order={items,totalAmount,totalItems,user,paymentMethod,selectedAddress,status:"pending"};
+  dispatch(createOrderAsync(order));
+    }
+    else{
+      alert("Please select address and payment method.");
+    }
+  //todo: show order confirmation dialog
+  //todo: clear cart
+  //todo:on server side, update product stock
+  
+};
+
     const [open, setOpen] = useState(true);
     return ( 
      <> 
      {!items.length && <Navigate to="/" replace={true}></Navigate>}
+     {orderPlaced && <Navigate to="/order-success" replace={true}></Navigate>}
     <div className="mx-auto max-w-7xl py-2 px-4 sm:px-6 lg:px-8">
      <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">   
     <div className="lg:col-span-3">
@@ -228,7 +246,7 @@ function Checkout() {
                   <input
                     id="cash"
                     name="payments"
-                    onchange={handlePayment}
+                    onChange={handlePayment}
                     value="cash"                    
                     type="radio"
                     checked={paymentMethod==='cash'}
@@ -242,7 +260,7 @@ function Checkout() {
                   <input
                     id="card"
                     name="payments"
-                    onchange={handlePayment}
+                    onChange={handlePayment}
                     value="card"                    
                     type="radio"
                     checked={paymentMethod==='card'}
@@ -334,12 +352,12 @@ function Checkout() {
                       </div>
                       <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                       <div className="mt-6">
-                        <Link to="/checkout"
-                          
-                          className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                        <div
+                          onClick={handleOrder}
+                          className="flex cursor-pointer items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                         >
-                          Checkout
-                        </Link>
+                          Order Now
+                        </div>
                       </div>
                       <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                         <p>
