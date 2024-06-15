@@ -6309,138 +6309,25 @@
           "pinCode": "123456"
         }
       ]
+    },
+    {
+      "id": "37c2",
+      "email": "yadavvibha0508@gmail.com",
+      "password": "A123456b@",
+      "addresses": [
+        {
+          "name": "Vibha Yadav",
+          "email": "yadavvibha0508@gmail.com",
+          "phone": "9454055225",
+          "street": "A-12/29 Shivaji puram sector-14 ,Indira Nagar",
+          "city": "Lucknow",
+          "state": "UTTAR PRADESH",
+          "pinCode": "226016"
+        }
+      ]
     }
   ],
   "cart": [
-    {
-      "id": "4941",
-      "title": "Chanel Coco Noir Eau De",
-      "description": "Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.",
-      "category": "fragrances",
-      "price": 129.99,
-      "discountPercentage": 18.64,
-      "rating": 2.76,
-      "stock": 41,
-      "tags": [
-        "fragrances",
-        "perfumes"
-      ],
-      "brand": "Chanel",
-      "sku": "K71HBCGS",
-      "weight": 4,
-      "dimensions": {
-        "width": 21.27,
-        "height": 28,
-        "depth": 11.89
-      },
-      "warrantyInformation": "1 week warranty",
-      "shippingInformation": "Ships in 1 month",
-      "availabilityStatus": "In Stock",
-      "reviews": [
-        {
-          "rating": 1,
-          "comment": "Disappointing product!",
-          "date": "2024-05-23T08:56:21.619Z",
-          "reviewerName": "Lincoln Kelly",
-          "reviewerEmail": "lincoln.kelly@x.dummyjson.com"
-        },
-        {
-          "rating": 4,
-          "comment": "Great product!",
-          "date": "2024-05-23T08:56:21.619Z",
-          "reviewerName": "Lincoln Kelly",
-          "reviewerEmail": "lincoln.kelly@x.dummyjson.com"
-        },
-        {
-          "rating": 4,
-          "comment": "Excellent quality!",
-          "date": "2024-05-23T08:56:21.619Z",
-          "reviewerName": "Lucas Allen",
-          "reviewerEmail": "lucas.allen@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "60 days return policy",
-      "minimumOrderQuantity": 5,
-      "meta": {
-        "createdAt": "2024-05-23T08:56:21.619Z",
-        "updatedAt": "2024-05-23T08:56:21.619Z",
-        "barcode": "1435582999795",
-        "qrCode": "https://dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/1.png",
-        "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/2.png",
-        "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/3.png"
-      ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/thumbnail.png",
-      "quantity": 2,
-      "user": "37c2"
-    },
-    {
-      "id": "5730",
-      "title": "Man Short Sleeve Shirt",
-      "description": "The Man Short Sleeve Shirt is a breezy and stylish option for warm days. With a comfortable fit and short sleeves, it's perfect for a laid-back yet polished look.",
-      "category": "mens-shirts",
-      "price": 19.99,
-      "discountPercentage": 8.65,
-      "rating": 4.62,
-      "stock": 20,
-      "tags": [
-        "clothing",
-        "men's shirts"
-      ],
-      "brand": "Casual Comfort",
-      "sku": "KEVGVDTV",
-      "weight": 2,
-      "dimensions": {
-        "width": 7.11,
-        "height": 28.63,
-        "depth": 27.54
-      },
-      "warrantyInformation": "5 year warranty",
-      "shippingInformation": "Ships in 2 weeks",
-      "availabilityStatus": "In Stock",
-      "reviews": [
-        {
-          "rating": 5,
-          "comment": "Great value for money!",
-          "date": "2024-05-23T08:56:21.623Z",
-          "reviewerName": "Caleb Nelson",
-          "reviewerEmail": "caleb.nelson@x.dummyjson.com"
-        },
-        {
-          "rating": 1,
-          "comment": "Disappointing product!",
-          "date": "2024-05-23T08:56:21.623Z",
-          "reviewerName": "Emily Johnson",
-          "reviewerEmail": "emily.johnson@x.dummyjson.com"
-        },
-        {
-          "rating": 4,
-          "comment": "Great product!",
-          "date": "2024-05-23T08:56:21.623Z",
-          "reviewerName": "Mila Hernandez",
-          "reviewerEmail": "mila.hernandez@x.dummyjson.com"
-        }
-      ],
-      "returnPolicy": "7 days return policy",
-      "minimumOrderQuantity": 1,
-      "meta": {
-        "createdAt": "2024-05-23T08:56:21.623Z",
-        "updatedAt": "2024-05-23T08:56:21.623Z",
-        "barcode": "8162805546713",
-        "qrCode": "https://dummyjson.com/public/qr-code.png"
-      },
-      "images": [
-        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/1.png",
-        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/2.png",
-        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/3.png",
-        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/4.png"
-      ],
-      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/thumbnail.png",
-      "quantity": 1,
-      "user": "37c2"
-    },
     {
       "id": "020e",
       "title": "Chanel Coco Noir Eau De",
@@ -6572,7 +6459,7 @@
   ],
   "orders": [
     {
-      "id": "5912",
+      "id": "8deb",
       "order": {
         "items": [
           {
@@ -6711,10 +6598,29 @@
           "id": "37c2",
           "email": "yadavvibha0508@gmail.com",
           "password": "A123456b@",
-          "addresses": []
+          "addresses": [
+            {
+              "name": "Vibha Yadav",
+              "email": "yadavvibha0508@gmail.com",
+              "phone": "9454055225",
+              "street": "A-12/29 Shivaji puram sector-14 ,Indira Nagar",
+              "city": "Lucknow",
+              "state": "UTTAR PRADESH",
+              "pinCode": "226016"
+            }
+          ]
         },
         "paymentMethod": "cash",
-        "selectedAddress": null
+        "selectedAddress": {
+          "name": "Vibha Yadav",
+          "email": "yadavvibha0508@gmail.com",
+          "phone": "9454055225",
+          "street": "A-12/29 Shivaji puram sector-14 ,Indira Nagar",
+          "city": "Lucknow",
+          "state": "UTTAR PRADESH",
+          "pinCode": "226016"
+        },
+        "status": "pending"
       }
     }
   ]
