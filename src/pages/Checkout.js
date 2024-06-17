@@ -14,6 +14,7 @@ import { Link,Navigate } from 'react-router-dom'
 import { useForm } from "react-hook-form";
 import { updateUserAsync,selectLoggedInUser } from '../features/auth/authSlice';
 import { createOrderAsync,selectCurrentOrder } from '../features/order/orderSlice';
+import { selectUserInfo } from '../features/user/userSlice';
 
 
 
@@ -24,7 +25,7 @@ function Checkout() {
   const dispatch = useDispatch();
   const { register, reset, handleSubmit, formState: { errors } } = useForm();
 
-  const user=useSelector(selectLoggedInUser);
+  const user=useSelector(selectUserInfo);
 
   const items=useSelector(selectItems);
   const currentOrder=useSelector(selectCurrentOrder);

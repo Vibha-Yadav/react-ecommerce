@@ -6270,12 +6270,6 @@
       "id": "37c2",
       "email": "yadavvibha0508@gmail.com",
       "password": "A123456b@",
-      "addresses": []
-    },
-    {
-      "id": "37c2",
-      "email": "yadavvibha0508@gmail.com",
-      "password": "A123456b@",
       "addresses": [
         {
           "name": "Vibha Yadav",
@@ -6289,9 +6283,9 @@
       ]
     },
     {
-      "id": "2",
-      "email": "vibhayadavinps@gmail.com",
-      "password": "Q1234567w@",
+      "id": "37c2",
+      "email": "yadavvibha0508@gmail.com",
+      "password": "A123456b@",
       "addresses": []
     },
     {
@@ -6309,6 +6303,12 @@
           "pinCode": "123456"
         }
       ]
+    },
+    {
+      "id": "2",
+      "email": "vibhayadavinps@gmail.com",
+      "password": "Q1234567w@",
+      "addresses": []
     },
     {
       "id": "37c2",
@@ -6616,6 +6616,106 @@
           "email": "yadavvibha0508@gmail.com",
           "phone": "9454055225",
           "street": "A-12/29 Shivaji puram sector-14 ,Indira Nagar",
+          "city": "Lucknow",
+          "state": "UTTAR PRADESH",
+          "pinCode": "226016"
+        },
+        "status": "pending"
+      }
+    },
+    {
+      "id": "814d",
+      "order": {
+        "items": [
+          {
+            "id": "7e7e",
+            "title": "Chanel Coco Noir Eau De",
+            "description": "Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.",
+            "category": "fragrances",
+            "price": 129.99,
+            "discountPercentage": 18.64,
+            "rating": 2.76,
+            "stock": 41,
+            "tags": [
+              "fragrances",
+              "perfumes"
+            ],
+            "brand": "Chanel",
+            "sku": "K71HBCGS",
+            "weight": 4,
+            "dimensions": {
+              "width": 21.27,
+              "height": 28,
+              "depth": 11.89
+            },
+            "warrantyInformation": "1 week warranty",
+            "shippingInformation": "Ships in 1 month",
+            "availabilityStatus": "In Stock",
+            "reviews": [
+              {
+                "rating": 1,
+                "comment": "Disappointing product!",
+                "date": "2024-05-23T08:56:21.619Z",
+                "reviewerName": "Lincoln Kelly",
+                "reviewerEmail": "lincoln.kelly@x.dummyjson.com"
+              },
+              {
+                "rating": 4,
+                "comment": "Great product!",
+                "date": "2024-05-23T08:56:21.619Z",
+                "reviewerName": "Lincoln Kelly",
+                "reviewerEmail": "lincoln.kelly@x.dummyjson.com"
+              },
+              {
+                "rating": 4,
+                "comment": "Excellent quality!",
+                "date": "2024-05-23T08:56:21.619Z",
+                "reviewerName": "Lucas Allen",
+                "reviewerEmail": "lucas.allen@x.dummyjson.com"
+              }
+            ],
+            "returnPolicy": "60 days return policy",
+            "minimumOrderQuantity": 5,
+            "meta": {
+              "createdAt": "2024-05-23T08:56:21.619Z",
+              "updatedAt": "2024-05-23T08:56:21.619Z",
+              "barcode": "1435582999795",
+              "qrCode": "https://dummyjson.com/public/qr-code.png"
+            },
+            "images": [
+              "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/1.png",
+              "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/2.png",
+              "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/3.png"
+            ],
+            "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/thumbnail.png",
+            "quantity": 1,
+            "user": "37c2"
+          }
+        ],
+        "totalAmount": 129.99,
+        "totalItems": 1,
+        "user": {
+          "id": "37c2",
+          "email": "yadavvibha0508@gmail.com",
+          "password": "A123456b@",
+          "addresses": [
+            {
+              "name": "Vibha Yadav",
+              "email": "yadavvibha0508@gmail.com",
+              "phone": "1234567890",
+              "street": "Indira Nagar",
+              "city": "Lucknow",
+              "state": "UTTAR PRADESH",
+              "pinCode": "226016"
+            }
+          ]
+        },
+        "paymentMethod": "cash",
+        "selectedAddress": {
+          "name": "Vibha Yadav",
+          "email": "yadavvibha0508@gmail.com",
+          "phone": "1234567890",
+          "street": "Indira Nagar",
           "city": "Lucknow",
           "state": "UTTAR PRADESH",
           "pinCode": "226016"
