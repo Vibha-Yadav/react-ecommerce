@@ -34,6 +34,15 @@ export function checkUser(loginInfo) {
   });
 }
 
+export function signOut(userId) {
+  return new Promise(async (resolve) => {
+   
+     //todo : on the server we will remove user session
+      resolve({data: 'success'});
+    
+  });
+}
+
 // export function updateUser(update) {
 //   return new Promise(async (resolve) => {
    
