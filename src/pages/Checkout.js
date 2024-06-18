@@ -207,7 +207,14 @@ function Checkout() {
         </button>
       </div>
 
-        <div className="border-b border-gray-900/10 pb-12">
+      {/* idhar se hi address udaya hai */}
+      </div>
+
+      
+    </form>
+    
+    {/* // idhar ko lgaya hai */}
+    <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">Address</h2>
           <p className="mt-1 text-sm leading-6 text-gray-600">
             Choose from existing addresses.
@@ -276,11 +283,8 @@ function Checkout() {
             </fieldset>
           </div>
         </div>
-      </div>
-
-      
-    </form>
-    </div>
+    </div>    
+    {/* this upar wala div is the only issue , need to figure it out */}
     <div className="lg:col-span-2">
     <div className="mx-auto mt-12 bg-white max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
     
