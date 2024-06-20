@@ -10,18 +10,18 @@ const initialState = {
 
 
 export const createUserAsync = createAsyncThunk(
-  'user/updateUser',
+  'user/createUser',
   async (update) => {
-    const response = await updateUser(update);
+    const response = await createUser(update);
     // The value we return becomes the `fulfilled` action payload
     return response.data;
   }
 );
 
 export const updateUserAsync = createAsyncThunk(
-  'user/createUser',
+  'user/updateUser',
   async (userData) => {
-    const response = await createUser(userData);
+    const response = await updateUser(userData);
     // The value we return becomes the `fulfilled` action payload
     return response.data;
   }
@@ -45,7 +45,7 @@ export const signOutAsync = createAsyncThunk(
   }
 );
 
-export const counterSlice = createSlice({
+export const authSlice = createSlice({
   name: 'user',
   initialState,
   
@@ -96,7 +96,7 @@ export const counterSlice = createSlice({
 
 export const selectLoggedInUser = (state) => state.auth.loggedInUser;
 export const selectError = (state) => state.auth.error;
-export const { increment } = counterSlice.actions;
+export const { increment } = authSlice.actions;
 
 
-export default counterSlice.reducer;
+export default authSlice.reducer;
