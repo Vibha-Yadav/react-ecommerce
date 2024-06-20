@@ -6270,6 +6270,7 @@
       "id": "37c2",
       "email": "yadavvibha0508@gmail.com",
       "password": "A123456b@",
+      "role": "user",
       "addresses": [
         {
           "name": "Vibha Yadav",
@@ -6286,6 +6287,7 @@
       "id": "2",
       "email": "vibhayadavinps@gmail.com",
       "password": "Q1234567w@",
+      "role": "user",
       "addresses": [
         {
           "name": "Jignes Nohara",
@@ -6308,12 +6310,12 @@
       ]
     },
     {
-      "id": "2",
-      "email": "vibhayadavinps@gmail.com",
-      "password": "Q1234567w@",
-      "addresses": []
+      "id": "2965",
+      "email": "admin@gmail.com",
+      "password": "Admin@123456",
+      "addresses": [],
+      "role": "admin"
     }
-    
   ],
   "cart": [
     {
