@@ -367,9 +367,9 @@
       "title": "Chanel Coco Noir Eau De",
       "description": "Coco Noir by Chanel is an elegant and mysterious fragrance, featuring notes of grapefruit, rose, and sandalwood. Perfect for evening occasions.",
       "category": "fragrances",
-      "price": 129.99,
+      "price": 139.99,
       "discountPercentage": 18.64,
-      "rating": 2.76,
+      "rating": 0,
       "stock": 41,
       "tags": [
         "fragrances",
@@ -420,7 +420,8 @@
       "images": [
         "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/1.png",
         "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/2.png",
-        "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/3.png"
+        "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/3.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/thumbnail.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Chanel%20Coco%20Noir%20Eau%20De/thumbnail.png"
     },
@@ -429,9 +430,9 @@
       "title": "Dior J'adore",
       "description": "J'adore by Dior is a luxurious and floral fragrance, known for its blend of ylang-ylang, rose, and jasmine. It embodies femininity and sophistication.",
       "category": "fragrances",
-      "price": 89.99,
+      "price": 88,
       "discountPercentage": 17.44,
-      "rating": 3.31,
+      "rating": 0,
       "stock": 91,
       "tags": [
         "fragrances",
@@ -482,7 +483,8 @@
       "images": [
         "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/1.png",
         "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/2.png",
-        "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/3.png"
+        "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/3.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/thumbnail.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Dior%20J'adore/thumbnail.png"
     },
@@ -553,9 +555,9 @@
       "title": "Gucci Bloom Eau de",
       "description": "Gucci Bloom by Gucci is a floral and captivating fragrance, with notes of tuberose, jasmine, and Rangoon creeper. It's a modern and romantic scent.",
       "category": "fragrances",
-      "price": 79.99,
+      "price": 89.99,
       "discountPercentage": 8.9,
-      "rating": 2.69,
+      "rating": 0,
       "stock": 93,
       "tags": [
         "fragrances",
@@ -606,7 +608,8 @@
       "images": [
         "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/1.png",
         "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/2.png",
-        "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/3.png"
+        "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/3.png",
+        "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/thumbnail.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/fragrances/Gucci%20Bloom%20Eau%20de/thumbnail.png"
     },
@@ -6007,6 +6010,24 @@
         "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/3.png"
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Apple%20Airpods/thumbnail.png"
+    },
+    {
+      "id": "61dd",
+      "title": "Nike shoes",
+      "description": "mast joote hain",
+      "brand": "Nike",
+      "category": "mens-shoes",
+      "price": "5000",
+      "discountPercentage": "10",
+      "stock": "48",
+      "thumbnail": "https://www.google.com/search?sca_esv=d22370baf961194e&sxsrf=ADLYWIJpCUU1FUQWFlxkdgLZ3z66akz9rQ:1718956518422&q=shoes&udm=2&fbs=AEQNm0Dy1LkOxuH3kqvvcChyQcs_bLGJF_-DNvPa3LV_9PoOQPsm_hxYRj37u5mLNuYq6sVlf7lGDjZY_XFxJDpxp7V28VtAtEvbEaewFdLxRqu3RW7pxMm2983I6PBuXm3c4ATNxfTRerYTUtjWjWRLhA5FW_3RSZ6E0e0q8hRXjOhNtct5YK6PQaFEvNZ29WmlheKnXZERB1sHAX869QpXXOaPMKx0BQ&sa=X&ved=2ahUKEwjRvaiFnOyGAxU9E1kFHRl4BCMQtKgLegQIChAB#vhid=BLjsrxMgAfj7zM&vssid=mosaic",
+      "images": [
+        "https://www.google.com/search?sca_esv=d22370baf961194e&sxsrf=ADLYWIJpCUU1FUQWFlxkdgLZ3z66akz9rQ:1718956518422&q=shoes&udm=2&fbs=AEQNm0Dy1LkOxuH3kqvvcChyQcs_bLGJF_-DNvPa3LV_9PoOQPsm_hxYRj37u5mLNuYq6sVlf7lGDjZY_XFxJDpxp7V28VtAtEvbEaewFdLxRqu3RW7pxMm2983I6PBuXm3c4ATNxfTRerYTUtjWjWRLhA5FW_3RSZ6E0e0q8hRXjOhNtct5YK6PQaFEvNZ29WmlheKnXZERB1sHAX869QpXXOaPMKx0BQ&sa=X&ved=2ahUKEwjRvaiFnOyGAxU9E1kFHRl4BCMQtKgLegQIChAB#vhid=BLjsrxMgAfj7zM&vssid=mosaic",
+        "https://www.google.com/search?sca_esv=d22370baf961194e&sxsrf=ADLYWIJpCUU1FUQWFlxkdgLZ3z66akz9rQ:1718956518422&q=shoes&udm=2&fbs=AEQNm0Dy1LkOxuH3kqvvcChyQcs_bLGJF_-DNvPa3LV_9PoOQPsm_hxYRj37u5mLNuYq6sVlf7lGDjZY_XFxJDpxp7V28VtAtEvbEaewFdLxRqu3RW7pxMm2983I6PBuXm3c4ATNxfTRerYTUtjWjWRLhA5FW_3RSZ6E0e0q8hRXjOhNtct5YK6PQaFEvNZ29WmlheKnXZERB1sHAX869QpXXOaPMKx0BQ&sa=X&ved=2ahUKEwjRvaiFnOyGAxU9E1kFHRl4BCMQtKgLegQIChAB#vhid=BLjsrxMgAfj7zM&vssid=mosaic",
+        "https://www.google.com/search?sca_esv=d22370baf961194e&sxsrf=ADLYWIJpCUU1FUQWFlxkdgLZ3z66akz9rQ:1718956518422&q=shoes&udm=2&fbs=AEQNm0Dy1LkOxuH3kqvvcChyQcs_bLGJF_-DNvPa3LV_9PoOQPsm_hxYRj37u5mLNuYq6sVlf7lGDjZY_XFxJDpxp7V28VtAtEvbEaewFdLxRqu3RW7pxMm2983I6PBuXm3c4ATNxfTRerYTUtjWjWRLhA5FW_3RSZ6E0e0q8hRXjOhNtct5YK6PQaFEvNZ29WmlheKnXZERB1sHAX869QpXXOaPMKx0BQ&sa=X&ved=2ahUKEwjRvaiFnOyGAxU9E1kFHRl4BCMQtKgLegQIChAB#vhid=BLjsrxMgAfj7zM&vssid=mosaic",
+        "https://www.google.com/search?sca_esv=d22370baf961194e&sxsrf=ADLYWIJpCUU1FUQWFlxkdgLZ3z66akz9rQ:1718956518422&q=shoes&udm=2&fbs=AEQNm0Dy1LkOxuH3kqvvcChyQcs_bLGJF_-DNvPa3LV_9PoOQPsm_hxYRj37u5mLNuYq6sVlf7lGDjZY_XFxJDpxp7V28VtAtEvbEaewFdLxRqu3RW7pxMm2983I6PBuXm3c4ATNxfTRerYTUtjWjWRLhA5FW_3RSZ6E0e0q8hRXjOhNtct5YK6PQaFEvNZ29WmlheKnXZERB1sHAX869QpXXOaPMKx0BQ&sa=X&ved=2ahUKEwjRvaiFnOyGAxU9E1kFHRl4BCMQtKgLegQIChAB#vhid=BLjsrxMgAfj7zM&vssid=mosaic"
+      ],
+      "rating": 0
     }
   ],
   "brands": [
