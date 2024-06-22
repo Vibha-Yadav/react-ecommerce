@@ -543,11 +543,17 @@ function ProductGrid({products}){
                 
                 <p className="text-sm font-medium text-gray-900">${Math.round(product.price*(1-product.discountPercentage/100))}</p>
                 <p className="text-sm line-through font-medium text-gray-400">${product.price}</p>
-                </div>
-                
+                </div>                
               </div>
-              
+              {product.deleted &&(
+                <div>
+                  <p className='text-sm text-red-400'> Product Deleted</p>
+                </div>
+                 )}
             </div>
+              
+              
+            {/* </div> */}
             </Link>
           ))}
         </div>

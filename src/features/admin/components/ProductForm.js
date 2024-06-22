@@ -1,12 +1,12 @@
 import { useSelector,useDispatch } from 'react-redux';
-import { selectBrands,selectCategories,createProductAsync,fetchAllProductByIdAsync,selectProductById,updateProductAsync } from '../../product/productSlice';
+import { selectBrands,selectCategories,createProductAsync,fetchAllProductByIdAsync,selectProductById,updateProductAsync,clearSelectedProduct } from '../../product/productSlice';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
 
 function ProductForm() {
-  const { register, handleSubmit,setValue, formState:{errors},
+  const { register, handleSubmit,setValue,reset, formState:{errors},
  } = useForm();
   const brands=useSelector(selectBrands);
   const categories=useSelector(selectCategories);
@@ -19,11 +19,13 @@ function ProductForm() {
      {
        dispatch(fetchAllProductByIdAsync(params.id));
        
-     }  
+     } else{
+        dispatch(clearSelectedProduct());
+     } 
   },[params.id,dispatch])
 
   useEffect(()=>{
-    if(selectedProduct){
+    if(selectedProduct && params.id){
       setValue('title',selectedProduct.title);
       setValue('description',selectedProduct.description);
       setValue('price',selectedProduct.price);      
@@ -37,7 +39,16 @@ function ProductForm() {
       setValue('category',selectedProduct.category);
     }
        
-  },[selectedProduct,setValue])
+  },[selectedProduct,params.id,setValue]);
+
+  const handleDelete=()=>{
+    const product={...selectedProduct};
+    product.deleted=true;
+    dispatch(
+      updateProductAsync(product)
+    );
+    
+  }
   
   
     return ( 
@@ -58,13 +69,16 @@ function ProductForm() {
 
           if(params.id) {
             product.id=params.id;
+            product.rating=selectedProduct.rating || 0;
             dispatch(
               updateProductAsync(product)
             );
+            reset();
           }else{
             dispatch(
               createProductAsync(product)
             );
+            reset();
           }
           
         })}>
@@ -345,6 +359,12 @@ function ProductForm() {
         <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
           Cancel
         </button>
+        {selectedProduct && <button
+          onClick={handleDelete}
+          className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          Delete
+        </button>}
         <button
           type="submit"
           className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
