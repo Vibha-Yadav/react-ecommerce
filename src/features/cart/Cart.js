@@ -5,11 +5,14 @@ import {
   selectItems,
   updateCartAsync,
   deleteItemFromCartAsync,
+  selectCartStatus,
   
 } from './cartSlice';
 import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom';
+import { Grid } from 'react-loader-spinner';
+import  Modal  from '../common/Modal';
 
 
 
@@ -18,6 +21,9 @@ export default function Cart() {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(true);
   const items=useSelector(selectItems);
+  const status=useSelector(selectCartStatus);
+  const [openModal, setOpenModal] = useState(null);
+
   const totalAmount=items.reduce((amount, item) => item.price*item.quantity + amount, 0);
   const totalItems=items.reduce((total, item) => item.quantity + total, 0);
   
@@ -32,12 +38,25 @@ export default function Cart() {
   return (
     <>
     {!items.length && <Navigate to="/" replace={true}></Navigate>}
+    
     <div>
     <div className="mx-auto mt-12 bg-white max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
     
     <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
     <h1 className="text-4xl my-5 font-bold tracking-tight text-gray-900">Cart</h1>
                         <div className="flow-root">
+                        {status === 'loading' ? (
+            <Grid
+              height="80"
+              width="80"
+              color="rgb(79, 70, 229) "
+              ariaLabel="grid-loading"
+              radius="12.5"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+            />
+          ) : null}
                           <ul role="list" className="-my-6 divide-y divide-gray-200">
                             {items.map((item) => (
                               <li key={item.id} className="flex py-6">
@@ -76,8 +95,17 @@ export default function Cart() {
                                      </div>
 
                                     <div className="flex">
+                                    <Modal
+                            title={`Delete ${item.title}`}
+                            message="Are you sure you want to delete this Cart item ?"
+                            dangerOption="Delete"
+                            cancelOption="Cancel"
+                            dangerAction={(e) => handleRemove(e, item.id)}
+                            cancelAction={()=>setOpenModal(null)}
+                            showModal={openModal === item.id}
+                          ></Modal>
                                       <button
-                                        onClick={e=>handleRemove(e,item.id)}
+                                        onClick={e=>{setOpenModal(item.id)}}
                                         type="button"
                                         className="font-medium text-indigo-600 hover:text-indigo-500"
                                       >

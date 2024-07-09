@@ -2,7 +2,8 @@ import { useSelector,useDispatch } from 'react-redux';
 import { selectBrands,selectCategories,createProductAsync,fetchAllProductByIdAsync,selectProductById,updateProductAsync,clearSelectedProduct } from '../../product/productSlice';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
+import Modal from '../../common/Modal';
 
 
 function ProductForm() {
@@ -13,6 +14,7 @@ function ProductForm() {
   const dispatch=useDispatch();
   const params = useParams();
   const selectedProduct=useSelector(selectProductById);
+  const [openModal, setOpenModal] = useState(null);
 
   useEffect(()=>{
      if(params.id)
@@ -52,6 +54,7 @@ function ProductForm() {
   
   
     return ( 
+      <>
         <form
         noValidate
         onSubmit={handleSubmit((data)=>{
@@ -88,6 +91,11 @@ function ProductForm() {
           
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          {selectedProduct && selectedProduct.deleted && (
+                <h2 className="text-red-500 sm:col-span-6">
+                  This product is deleted
+                </h2>
+              )}
             <div className="sm:col-span-4">
               <label htmlFor="title" className="block text-sm font-medium leading-6 text-gray-900">
                 Product Name
@@ -359,12 +367,18 @@ function ProductForm() {
         <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
           Cancel
         </button>
-        {selectedProduct && <button
-          onClick={handleDelete}
+
+        {selectedProduct && !selectedProduct.deleted && (
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                setOpenModal(true);
+              }}
           className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Delete
-        </button>}
+        </button>
+        )}
         <button
           type="submit"
           className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
@@ -373,6 +387,18 @@ function ProductForm() {
         </button>
       </div>
     </form>
+    {selectedProduct && (
+        <Modal
+          title={`Delete ${selectedProduct.title}`}
+          message="Are you sure you want to delete this Product ?"
+          dangerOption="Delete"
+          cancelOption="Cancel"
+          dangerAction={handleDelete}
+          cancelAction={() => setOpenModal(null)}
+          showModal={openModal}
+        ></Modal>
+      )}
+    </>
      );
 }
 
